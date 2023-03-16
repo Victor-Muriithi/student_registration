@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "73684973329",
+    "firebase_url": "https://student-registration-ef12b-default-rtdb.firebaseio.com",
+    "project_id": "student-registration-ef12b",
+    "storage_bucket": "student-registration-ef12b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73684973329:android:f6dc57b5105d70c004feb0",
+        "android_client_info": {
+          "package_name": "com.example.studentregistration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73684973329-495anf0lgr8b6ffdoiq2l9pl197ku5h9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentregistration",
+            "certificate_hash": "573fd5983425fb58aee5d835500bc7a60a266cc2"
+          }
+        },
+        {
+          "client_id": "73684973329-b2dpajsu58bc2qritkbtrsbp1jq6gfa9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7RJkCnI6gBBbvy-Darb6MBxHjq87lLes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73684973329-b2dpajsu58bc2qritkbtrsbp1jq6gfa9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

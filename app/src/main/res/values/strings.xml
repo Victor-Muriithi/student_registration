@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">Student Registration</string>
+
+            <!--Schools Sections-->
+
+    <string-array name="school_array">
+        <item>Select The School</item>
+        <item>School of Business</item>
+        <item>School of Engineering</item>
+        <item>School of Computer Science and IT</item>
+        <item>School of Science</item>
+    </string-array>
+
+
+
+            <!--Department Section-->
+
+
+
+    <string-array name="default_Department">
+        <item>Select the Department</item>
+    </string-array>
+
+    <string-array name="business_departments">
+        <item>Select the Department</item>
+        <item>Department of Accounting</item>
+        <item>Department of Commerce</item>
+        <item>Department of Finance</item>
+    </string-array>
+
+    <string-array name="engineering_departments">
+        <item>Select the Department</item>
+        <item>Department of Mechatronics Engineering</item>
+        <item>Department of Mechanical Engineering</item>
+        <item>Department of Chemical Engineering</item>
+    </string-array>
+
+    <string-array name="CS_and_IT_departments">
+        <item>Select the Department</item>
+        <item>Department of Computer Science</item>
+        <item>Department of IT</item>
+    </string-array>
+
+    <string-array name="science_departments">
+        <item>Select the Department</item>
+        <item>Department of Nursing</item>
+        <item>Department of Actuarial Science</item>
+    </string-array>
+
+
+
+            <!--Courses Section-->
+
+    <string-array name="default_course">
+        <item>Select Course</item>
+    </string-array>
+
+    <string-array name="accounting_department">
+        <item>Select Course</item>
+        <item>BSc of Accounting</item>
+    </string-array>
+
+    <string-array name="commerce_department">
+        <item>Select Course</item>
+        <item>BSc of Commerce</item>
+    </string-array>
+
+    <string-array name="finance_department">
+        <item>Select Course</item>
+        <item>BSc of Finance</item>
+    </string-array>
+
+    <string-array name="mechatronics_department">
+        <item>Select Course</item>
+        <item>BSc of Mechatronics Engineering</item>
+    </string-array>
+
+    <string-array name="mechanical_department">
+        <item>Select Course</item>
+        <item>BSc of Mechanical Engineering</item>
+    </string-array>
+
+    <string-array name="chemical_department">
+        <item>Select Course</item>
+        <item>BSc of Chemical Engineering</item>
+    </string-array>
+
+    <string-array name="cs_department">,
+        <item>Select Course</item>
+        <item>BSc of Computer Science</item>
+    </string-array>
+
+    <string-array name="IT_department">
+        <item>Select Course</item>
+        <item>BSc of Information Technology</item>
+    </string-array>
+
+    <string-array name="nursing_department">
+        <item>Select Course</item>
+        <item>BSc of Nursing</item>
+    </string-array>
+
+    <string-array name="actuarial_department">
+        <item>Select Course</item>
+        <item>BSc of Actuarial Science</item>
+    </string-array>
+
+
+            <!--Year section-->
+
+    <string-array name="years_array">
+        <item>Select Year</item>
+        <item>Year 1</item>
+        <item>Year 2</item>
+        <item>Year 3</item>
+        <item>Year 4</item>
+    </string-array>
+
+
+
+</resources>
