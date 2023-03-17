@@ -117,5 +117,16 @@
     </string-array>
 
 
+    <!--Semester Section-->
+
+
+
+    <string-array name="semester_array">
+        <item>Select Semester</item>
+        <item>Semester 1</item>
+        <item>Semester 2</item>
+    </string-array>
+
+
 
 </resources>
