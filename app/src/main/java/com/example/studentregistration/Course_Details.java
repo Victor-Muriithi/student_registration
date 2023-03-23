@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,9 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -270,32 +267,35 @@ public class Course_Details extends AppCompatActivity {
 
 
         btn_save.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SuspiciousIndentation")
             @Override
             public void onClick(View view) {
                 uniqueID = UUID.randomUUID().toString();
                 push_data_ref = FirebaseDatabase.getInstance().getReference();
 
                 map= new HashMap<>();
-                    map.put("first_name", first_name);
-                    map.put("middle_name", middle_name);
-                    map.put("last_name", last_name);
-                    map.put("reg_number", reg_number);
-                    map.put("id_number", id_number);
-                    map.put("gender", gender);
-                    map.put("school", school);
-                    map.put("department",department);
-                    map.put("course", course);
-                    map.put("units", unit_list);
-                    map.put("unit_code", code_list);
+                map.put("first_name", first_name);
+                map.put("middle_name", middle_name);
+                map.put("last_name", last_name);
+                map.put("reg_number", reg_number);
+                map.put("id_number", id_number);
+                map.put("gender", gender);
+                map.put("school", school);
+                map.put("department",department);
+                map.put("course", course);
+                map.put("units", unit_list);
+                map.put("unit_code", code_list);
+                map.put("year", selectedYear);
+                map.put("semester", selectedSemester);
 
-                    push_data_ref.child("students").push().setValue(map).addOnCompleteListener(task ->{
-                        if(task.isSuccessful()){
+                push_data_ref.child("students").push().setValue(map).addOnCompleteListener(task ->{
+                    if(task.isSuccessful()){
                             Toast.makeText(Course_Details.this, "Data inserted successfully", Toast.LENGTH_SHORT).show();
-                        } else {
+                    } else {
                             Toast.makeText(Course_Details.this, "Error when pushing data", Toast.LENGTH_SHORT).show();
-                        }
+                    }
 
-                    });
+                });
 
 
 
@@ -306,8 +306,8 @@ public class Course_Details extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(Course_Details.this, Summary.class);
-                startActivity(i);
+                Intent intent = new Intent(Course_Details.this, Summary.class);
+                startActivity(intent);
             }
         });
 

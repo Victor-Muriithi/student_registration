@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class Personal_Details extends AppCompatActivity {
     private ArrayAdapter<CharSequence> school_adapter, department_adapter, course_adapter;
     private String f_name, m_name, l_name, reg_no, gender, id_no;
     private RadioGroup radioGroup;
+    private ScrollView scrollView;
 
     private DatabaseReference reference;
 
@@ -51,6 +53,12 @@ public class Personal_Details extends AppCompatActivity {
         btn_cancel = findViewById(R.id.btn_cancel);
 
         radioGroup = findViewById(R.id.radioGroup);
+
+
+
+        scrollView = findViewById(R.id.scrollView);
+
+
 
 
         school_adapter = ArrayAdapter.createFromResource(this, R.array.school_array, R.layout.spinner_layout);
@@ -224,7 +232,7 @@ public class Personal_Details extends AppCompatActivity {
                 i.putExtra("middle_name", m_name);
                 i.putExtra("last_name", l_name);
                 i.putExtra("reg_no", reg_no);
-                i.putExtra("id_number", id_no);
+                i.putExtra("id_no", id_no);
                 i.putExtra("gender", gender);
                 i.putExtra("school", selectedSchool);
                 i.putExtra("department", selectedDepartment);

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Student Registration</string>
 
-            <!--Schools Sections-->
+    <!--Schools Sections-->
 
     <string-array name="school_array">
         <item>Select The School</item>
@@ -12,9 +12,7 @@
     </string-array>
 
 
-
-            <!--Department Section-->
-
+    <!--Department Section-->
 
 
     <string-array name="default_Department">
@@ -48,8 +46,7 @@
     </string-array>
 
 
-
-            <!--Courses Section-->
+    <!--Courses Section-->
 
     <string-array name="default_course">
         <item>Select Course</item>
@@ -106,7 +103,7 @@
     </string-array>
 
 
-            <!--Year section-->
+    <!--Year section-->
 
     <string-array name="years_array">
         <item>Select Year</item>
@@ -120,13 +117,11 @@
     <!--Semester Section-->
 
 
-
     <string-array name="semester_array">
         <item>Select Semester</item>
         <item>Semester 1</item>
         <item>Semester 2</item>
     </string-array>
-
 
 
 </resources>
