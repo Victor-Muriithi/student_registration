@@ -30,7 +30,6 @@ public class Personal_Details extends AppCompatActivity {
     private ArrayAdapter<CharSequence> school_adapter, department_adapter, course_adapter;
     private String f_name, m_name, l_name, reg_no, gender, id_no;
     private RadioGroup radioGroup;
-    private ScrollView scrollView;
 
     private DatabaseReference reference;
 
@@ -56,7 +55,7 @@ public class Personal_Details extends AppCompatActivity {
 
 
 
-        scrollView = findViewById(R.id.scrollView);
+
 
 
 
