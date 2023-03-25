@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class Summary extends AppCompatActivity {
-    String unit_name, first_name, last_name, middle_name, Reg_number, Id_number, School, Department, Course, Year, Semester, Units, Name;
+    private String unit_name, first_name, last_name, middle_name, Reg_number, Id_number, School, Department, Course, Year, Semester, Units, Name, uniqueId;
     private TextView name, reg_number, id_number, school, department, course, year, semester;
     private ListView units;
     private ArrayList<String> unit_list;
@@ -32,7 +32,6 @@ public class Summary extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.summary);
-
         name = findViewById(R.id.name_textView);
         reg_number = findViewById(R.id.regNo_textView);
         id_number = findViewById(R.id.id_textView);
@@ -41,13 +40,13 @@ public class Summary extends AppCompatActivity {
         course = findViewById(R.id.course_textView);
         year = findViewById(R.id.year_textView);
         semester = findViewById(R.id.semester_textView);
-        units = findViewById(R.id.unit_listView);
 
+        uniqueId = getIntent().getStringExtra("id");
 
+        System.out.println(uniqueId);
         unit_list = new ArrayList<String>();
-
         reference = FirebaseDatabase.getInstance().getReference("students");
-        reference.child("-NQiZIxKXgQD4zu7jXwi").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+        reference.child(uniqueId).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 DataSnapshot dataSnapshot = task.getResult();

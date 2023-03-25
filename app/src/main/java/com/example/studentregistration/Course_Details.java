@@ -33,7 +33,7 @@ public class Course_Details extends AppCompatActivity {
         private Spinner course_spinner2, year_spinner, semester_spinner;
         private Button btn_save, btn_summary;
         private String first_name, middle_name, last_name, reg_number, gender, school, department, course, id_number, unit_code, unit_name;
-        private ArrayList<String> list, unit_list, code_list, all_data;
+        private ArrayList<String> list, unit_list, code_list;
         private ArrayAdapter<String> course_adapter_2;
         private String selectedYear, selectedSemester, uniqueID;
         private String year, sem, year_and_sem, databaseNumber;
@@ -287,19 +287,22 @@ public class Course_Details extends AppCompatActivity {
                 map.put("unit_code", code_list);
                 map.put("year", selectedYear);
                 map.put("semester", selectedSemester);
-
-                push_data_ref.child("students").push().setValue(map).addOnCompleteListener(task ->{
+                uniqueID = push_data_ref.child("students").push().getKey();
+                push_data_ref.child("students/"+uniqueID).setValue(map).addOnCompleteListener(task ->{
                     if(task.isSuccessful()){
                             Toast.makeText(Course_Details.this, "Data inserted successfully", Toast.LENGTH_SHORT).show();
+
+
                     } else {
                             Toast.makeText(Course_Details.this, "Error when pushing data", Toast.LENGTH_SHORT).show();
                     }
 
                 });
 
-
+                System.out.println(uniqueID);
 
             }
+
         });
 
         btn_summary.setOnClickListener(new View.OnClickListener() {
@@ -307,7 +310,10 @@ public class Course_Details extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(Course_Details.this, Summary.class);
+
+                intent.putExtra("id", uniqueID);
                 startActivity(intent);
+
             }
         });
 
